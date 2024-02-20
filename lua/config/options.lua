@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 local is_windows = vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1
+vim.g.is_windows = is_windows
 if is_windows then
   vim.opt.shell = "pwsh.exe"
 end
