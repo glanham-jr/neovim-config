@@ -2,6 +2,7 @@
 -- add tsserver and setup with typescript.nvim instead of lspconfig
 return {
   "neovim/nvim-lspconfig",
+  opts = { autoformat = false },
   dependencies = {
     "jose-elias-alvarez/typescript.nvim",
     init = function()
