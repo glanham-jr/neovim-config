@@ -10,6 +10,17 @@ vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a T
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
+-- Set 2-space indentation for JavaScript files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "javascript,javascriptreact,typescript,typescriptreact",
+  callback = function()
+    vim.bo.tabstop = 2
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.expandtab = true  -- Makes sure spaces are used instead of tabs
+  end,
+})
+
 local is_windows = vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1
 vim.g.is_windows = is_windows
 if is_windows then
