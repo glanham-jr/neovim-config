@@ -29,76 +29,79 @@ return {
   end,
   -- keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
   keys = {
+    { "<space>p", "<NOP>", desc = "Iron" },
     { "<space>po", "<cmd>IronReplHere<cr>", desc = "Iron Repl Here" },
+    { "<space>ps", "<NOP>", desc = "Send" },
     {
       "<space>psc",
       function()
         require("iron.core").send_motion()
       end,
-      desc = "Iron send_motion",
+      desc = "send_motion",
     },
     {
       "<space>psf",
       function()
         require("iron.core").send_file()
       end,
-      desc = "Iron send_file",
+      desc = "send_file",
     },
     {
       "<space>psl",
       function()
         require("iron.core").send_line()
       end,
-      desc = "Iron send_line",
+      desc = "send_line",
     },
     {
       "<space>psm",
       function()
         require("iron.core").send_mark()
       end,
-      desc = "Iron send_mark",
+      desc = "send_mark",
     },
+    { "<space>pm", "<NOP>", desc = "Mark" },
     {
       "<space>pmc",
       function()
         require("iron.core").mark_motion()
       end,
-      desc = "Iron mark_motion",
+      desc = "mark_motion",
     },
     {
       "<space>pmd",
       function()
         require("iron.core").remove_mark()
       end,
-      desc = "Iron remove_mark",
+      desc = "remove_mark",
     },
     {
       "<space>ps<cr>",
       function()
         require("iron.core").cr()
       end,
-      desc = "Iron cr",
+      desc = "cr",
     },
     {
-      "<space>ps<space>",
+      "<space>p<space>",
       function()
         require("iron.core").interrupt()
       end,
-      desc = "Iron interrupt",
+      desc = "interrupt",
     },
     {
-      "<space>psq",
+      "<space>pq",
       function()
         require("iron.core").exit()
       end,
-      desc = "Iron exit",
+      desc = "exit",
     },
     {
-      "<space>pcl",
+      "<space>pc",
       function()
         require("iron.core").clear()
       end,
-      desc = "Iron clear",
+      desc = "clear",
     },
   },
 }
