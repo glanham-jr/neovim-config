@@ -8,3 +8,5 @@ foo.*
 data
 lazy-lock.json
 lazyvim.json
+lazygit
+lazygit.tar.gz
