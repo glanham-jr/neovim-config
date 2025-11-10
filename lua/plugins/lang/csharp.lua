@@ -23,7 +23,7 @@ return {
       -- configure omnisharp to fix the semantic tokens bug (really annoying)
       setup = {
         omnisharp = function(_, _)
-          require("lazyvim.util").on_attach(function(client, _)
+          require("lazyvim.util").lsp.action(function(client, _)
             if client.name == "omnisharp" then
               ---@type string[]
               local tokenModifiers = client.server_capabilities.semanticTokensProvider.legend.tokenModifiers
