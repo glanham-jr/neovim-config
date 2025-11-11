@@ -5,11 +5,11 @@ return {
   dependencies = {
     "jose-elias-alvarez/typescript.nvim",
     init = function()
-      require("lazyvim.util").lsp.action(function(_, buffer)
+      -- Snacks.util.lsp.on(function(buffer)
           -- stylua: ignore
-          vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
-        vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
-      end)
+        -- vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
+        -- vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
+      -- end)
     end,
   },
 }
